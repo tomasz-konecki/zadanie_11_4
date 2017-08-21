@@ -28,16 +28,22 @@ body {
 }
 .phone-functions {
     flex: 1;
-    border-left: 3px solid gray;;
+    border-left: 2px solid gray;;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 button {
     margin: 10px;
 }
-.glyphicon-camera {
+.glyphicon {
     padding-right: 5px;
+}
+
+.actions {
+    .border: 1px solid teal;
+    padding-top: 5px;
 }
 
 @media(max-width: 480px){
