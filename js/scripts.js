@@ -1,5 +1,5 @@
 var phones; // global variable used by both functions: createPhonese & displayPhones;
-
+   
 function Phone(brand, model, price, color, screenSize, resolH, resolV) {
     this.brand = brand;
     this.model = model;
@@ -14,29 +14,8 @@ function Phone(brand, model, price, color, screenSize, resolH, resolV) {
 
 Phone.prototype.printInfo = function() {
 
-var model1 = document.getElementById('model-1'),
-    model2 = document.getElementById('model-2'),
-    model3 = document.getElementById('model-3');
+return `Brand: ${this.brand};\nColour: ${this.color};\n Screen size: ${this.screenSize}";\nResolution: ${this.resolH}x${this.resolV} pixels;\n Price: ${this.price} PLN.`;
 
-switch (this.model) {
-    case "Samsung Galaxy S6":
-    model1.innerText = this.model;
-    return printPhoneDetails(this);
-    break;
-
-    case "iPhone 6S":
-    model2.innerText = this.model;
-    return printPhoneDetails(this);
-    break;
-
-    case "OnePlus One":
-    model3.innerText = this.model;
-    return printPhoneDetails(this);
-    break;
-
-    default:
-    alert("Something's not right");
-}
 }
 
 Phone.prototype.ring = function() {
@@ -66,23 +45,17 @@ var samsungGalaxyS6 = new Phone("Samsung Electronics", "Samsung Galaxy S6", 2250
 
 function displayPhones() {
 var i = 0,
-    infoText,
     phonesLength = phones.length;
 
 while (i < phonesLength) {
-    infoText = phones[i].printInfo();
-    document.getElementById(`info-${i+1}`).innerText = infoText;
+    document.getElementById(`model-${i+1}`).innerText = phones[i].model;
+    document.getElementById(`info-${i+1}`).innerText = phones[i].printInfo();
     i++;
 }
 }
 
 // ---------------------------------------------------------------------------------------------------
 
-function printPhoneDetails (phone) {
-    return `Brand: ${phone.brand};\nColour: ${phone.color};\n Screen size: ${phone.screenSize}";\nResolution: ${phone.resolH}x${phone.resolV} pixels;\n Price: ${phone.price} PLN.`;
-}
-
-// ---------------------------------------------------------------------------------------------------
 
 createPhones();
 displayPhones();
