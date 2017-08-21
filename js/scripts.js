@@ -13,8 +13,7 @@ function Phone(brand, model, price, color, screenSize, resolH, resolV) {
 // ---------------------------------------------------------------------------------------------------
 
 Phone.prototype.printInfo = function() {
-
-return `Brand: ${this.brand};\nColour: ${this.color};\n Screen size: ${this.screenSize}";\nResolution: ${this.resolH}x${this.resolV} pixels;\n Price: ${this.price} PLN.`;
+    return `Brand: ${this.brand};\nColour: ${this.color};\n Screen size: ${this.screenSize}";\nResolution: ${this.resolH}x${this.resolV} pixels;\n Price: ${this.price} PLN.`;
 
 }
 
