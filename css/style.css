@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+.phone-details {
+    max-width: 800px;
+    height: auto;
+    border: 3px solid gray;
+    display: flex;
+}
+.phone-info {
+    padding-left: 20px;
+    border: 2px solid coral;
+    flex: 1.3;
+}
+.phone-functions {
+    flex: 1;
+    border: 3px dotted blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    margin: 10px;
+}
