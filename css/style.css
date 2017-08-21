@@ -14,7 +14,6 @@ body {
     max-width: 1200px;
     padding: 20px;
 }
-
 .phone-details {
     max-width: 800px;
     height: auto;
@@ -27,7 +26,7 @@ body {
 }
 .phone-functions {
     flex: 1;
-    border-left: 2px solid gray;;
+    border-left: 2px solid gray;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,13 +38,31 @@ button {
 .glyphicon {
     padding-right: 5px;
 }
-
 .actions {
     padding-top: 5px;
 }
 
+@media(min-width: 481px) and (max-width: 700px){
+    p {
+        font-size: 9px;
+    }
+    .buttons {
+        display: flex;
+        justify-content: center;
+    }
+    .btn{
+        padding: 1px 5px;
+        font-size: 10px;
+        line-height: 1.5;
+        border-radius: 3px;
+    }
+}
 @media(max-width: 480px){
     .phone-details {
         flex-direction: column;
+    }
+    .phone-functions {
+        border-top: 2px solid gray;
+        border-left: none;
     }
 }
