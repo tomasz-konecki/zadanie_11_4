@@ -10,32 +10,28 @@ function Phone(brand, model, price, color, screenSize, resolH, resolV) {
     this.resolV = resolV;
 }
 
+// ---------------------------------------------------------------------------------------------------
+
 Phone.prototype.printInfo = function() {
 
 var model1 = document.getElementById('model-1'),
     model2 = document.getElementById('model-2'),
-    model3 = document.getElementById('model-3'),
-    phoneDetails;
+    model3 = document.getElementById('model-3');
 
 switch (this.model) {
     case "Samsung Galaxy S6":
     model1.innerText = this.model;
-    phoneDetails = `Brand: ${this.brand};\nColour: ${this.color};\n Screen size: ${this.screenSize}";\nResolution: ${this.resolH}x${this.resolV} pixels;\n Price: ${this.price} PLN.`;
-    return phoneDetails;
+    return printPhoneDetails(this);
     break;
 
     case "iPhone 6S":
     model2.innerText = this.model;
-    phoneDetails = `The phone has been produced by ${this.brand},\n it is ${this.color}, the screen size is ${this.screenSize}",
-the resolution is ${this.resolH}x${this.resolV} pixels. It costs ${this.price}PLN.`;
-    return phoneDetails;
+    return printPhoneDetails(this);
     break;
 
     case "OnePlus One":
     model3.innerText = this.model;
-    phoneDetails = `The phone has been produced by ${this.brand},\n it is ${this.color}, the screen size is ${this.screenSize}",
-the resolution is ${this.resolH}x${this.resolV} pixels. It costs ${this.price}PLN.`;
-    return phoneDetails;
+    return printPhoneDetails(this);
     break;
 
     default:
@@ -43,7 +39,6 @@ the resolution is ${this.resolH}x${this.resolV} pixels. It costs ${this.price}PL
 }
 }
 
-// methods:
 Phone.prototype.ring = function() {
     console.log(`${this.model} is ringing`);
 }
@@ -56,7 +51,7 @@ Phone.prototype.takePhoto = function() {
 
 }
 
-// ***************************************************************************************************
+// ---------------------------------------------------------------------------------------------------
 
 function createPhones() {
 
@@ -81,7 +76,13 @@ while (i < phonesLength) {
 }
 }
 
-// ***************************************************************************************************
+// ---------------------------------------------------------------------------------------------------
+
+function printPhoneDetails (phone) {
+    return `Brand: ${phone.brand};\nColour: ${phone.color};\n Screen size: ${phone.screenSize}";\nResolution: ${phone.resolH}x${phone.resolV} pixels;\n Price: ${phone.price} PLN.`;
+}
+
+// ---------------------------------------------------------------------------------------------------
 
 createPhones();
 displayPhones();
