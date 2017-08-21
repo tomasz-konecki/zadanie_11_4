@@ -24,17 +24,17 @@ Phone.prototype.printInfo = function() {
 
 Phone.prototype.ring = function(n) {
     paragraphs[n].innerText = `${this.model} is ringing!`;
-    resetAction();
+    resetAction(n);
 }
 
 Phone.prototype.sendText = function(n) {
     paragraphs[n].innerText = `${this.model} is sending a text message!`;
-    resetAction();
+    resetAction(n);
 }
 
 Phone.prototype.takePhoto = function(n) {
     paragraphs[n].innerText = `${this.model} is taking a photo!`;
-    resetAction();
+    resetAction(n);
 }
 
 // ---------------------------------------------------------------------------------------------------
@@ -60,13 +60,9 @@ function displayPhones() {
     }
 }
 
-
-function resetAction() {
+function resetAction(n) {
     setTimeout(function() {
-        var k;
-        for (k = 0; k < 3; k++) {
-            paragraphs[k].innerText = 'Phone action';
-        }
+        paragraphs[n].innerText = 'Phone action';
     }, 1500);
 }
 
