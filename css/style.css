@@ -16,7 +16,6 @@ body {
 }
 .phone-details {
     max-width: 800px;
-    height: auto;
     border: 3px solid gray;
     display: flex;
 }

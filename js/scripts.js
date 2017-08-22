@@ -48,16 +48,12 @@ phones = [samsungGalaxyS6, iPhone6S, onePlusOne];
 // ---------------------------------------------------------------------------------------------------
 
 function displayPhones() {
-    var i = 0,
-        phonesLength = phones.length;
-
-    while (i < phonesLength) {
-        document.getElementById(`model-${i+1}`)
-            .innerText = phones[i].model;
-        document.getElementById(`info-${i+1}`)
-            .innerText = phones[i].printInfo();
-        i++;
-    }
+    phones.forEach((phone, index) => {
+        document.getElementById(`model-${index+1}`)
+            .innerText = phone.model;
+        document.getElementById(`info-${index+1}`)
+            .innerText = phone.printInfo();
+    });
 }
 
 function resetAction(n) {
@@ -68,39 +64,17 @@ function resetAction(n) {
 
 // ---------------------------------------------------------------------------------------------------
 
-btnRing[0].addEventListener("click", function() {
-    samsungGalaxyS6.ring(0);
-});
-btnRing[1].addEventListener("click", function() {
-    iPhone6S.ring(1);
-});
-btnRing[2].addEventListener("click", function() {
-    onePlusOne.ring(2);
-});
+phones.forEach((phone, index) => {
+    btnRing[index].addEventListener('click', () => phone.ring(index))
+})
 
-// ---------------------------------------------------------------------------------------------------
+phones.forEach((phone, index) => {
+    btnText[index].addEventListener('click', () => phone.sendText(index))
+})
 
-btnText[0].addEventListener("click", function() {
-    samsungGalaxyS6.sendText(0);
-});
-btnText[1].addEventListener("click", function() {
-    iPhone6S.sendText(1);
-});
-btnText[2].addEventListener("click", function() {
-    onePlusOne.sendText(2);
-});
-
-// ---------------------------------------------------------------------------------------------------
-
-btnPhoto[0].addEventListener("click", function() {
-    samsungGalaxyS6.takePhoto(0);
-});
-btnPhoto[1].addEventListener("click", function() {
-    iPhone6S.takePhoto(1);
-});
-btnPhoto[2].addEventListener("click", function() {
-    onePlusOne.takePhoto(2);
-});
+phones.forEach((phone, index) => {
+    btnPhoto[index].addEventListener('click', () => phone.takePhoto(index))
+})
 
 // ---------------------------------------------------------------------------------------------------
 
