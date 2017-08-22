@@ -21,10 +21,10 @@ body {
 }
 .phone-info {
     padding: 14px 0 14px 20px;
-    flex: 1.1;
+    width: 55%;
 }
 .phone-functions {
-    flex: 1;
+    width: 45%;
     border-left: 2px solid gray;
     display: flex;
     flex-direction: column;
@@ -60,7 +60,11 @@ button {
     .phone-details {
         flex-direction: column;
     }
+    .phone-info {
+        width: 100%;
+    }
     .phone-functions {
+        width: 100%;
         border-top: 2px solid gray;
         border-left: none;
     }

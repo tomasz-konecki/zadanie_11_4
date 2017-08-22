@@ -3,14 +3,40 @@ var btnRing = document.getElementsByClassName('btn-ring'),
     btnPhoto = document.getElementsByClassName('btn-photo'),
     paragraphs = document.getElementsByTagName('p'),
 
-    samsungGalaxyS6 = new Phone("Samsung Electronics", "Samsung Galaxy S6", 2250, "black", 5.5, 1440, 2560),
-    iPhone6S = new Phone("Apple", "iPhone 6S", 1750, "silver", 4.7, 750, 1334),
-    onePlusOne = new Phone("OnePlus", "OnePlus One", 1950, "white", 5.5, 1080, 1920),
+    samsungGalaxyS6 = new Phone({
+        brand: "Samsung Electronics",
+        model: "Samsung Galaxy S6",
+        price: 2250,
+        color: "black",
+        screenSize: 5.5,
+        resolH: 1440,
+        resolV: 2560
+    }),
+
+    iPhone6S = new Phone({
+        brand: "Apple",
+        model: "iPhone 6S",
+        price: 1750,
+        color: "silver",
+        screenSize: 4.7,
+        resolH: 750,
+        resolV: 1334
+    }),
+
+    onePlusOne = new Phone({
+        brand: "OnePlus",
+        model: "OnePlus One",
+        price: 1950,
+        color: "white",
+        screenSize: 5.5,
+        resolH: 1080,
+        resolV: 1920
+    }),
 
     phones = [samsungGalaxyS6, iPhone6S, onePlusOne];
 // ---------------------------------------------------------------------------------------------------
 
-function Phone(brand, model, price, color, screenSize, resolH, resolV) {
+function Phone({brand, model, price, color, screenSize, resolH, resolV}) {
     this.brand = brand;
     this.model = model;
     this.price = price;
