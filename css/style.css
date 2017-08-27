@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 @font-face {
     font-family: 'Glyphicons Halflings';
@@ -21,7 +21,7 @@ body {
 }
 .phone-info {
     padding: 14px 0 14px 20px;
-    width: 55%;
+    flex-basis: 55%;
 }
 .phone-functions {
     width: 45%;
