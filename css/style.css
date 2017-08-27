@@ -1,0 +1,71 @@
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('fonts/glyphicons-halflings-regular.eot');
+    src: url('fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('fonts/glyphicons-halflings-regular.woff') format('woff'), url('fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+body {
+    background: #e0e0e0;
+    font-family: 'Roboto', sans-serif;
+}
+.container {
+    max-width: 1200px;
+    padding: 20px;
+}
+.phone-details {
+    max-width: 800px;
+    border: 3px solid gray;
+    display: flex;
+}
+.phone-info {
+    padding: 14px 0 14px 20px;
+    flex-basis: 55%;
+}
+.phone-functions {
+    width: 45%;
+    border-left: 2px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    margin: 10px;
+}
+.glyphicon {
+    padding-right: 5px;
+}
+.actions {
+    padding-top: 5px;
+}
+
+@media(min-width: 481px) and (max-width: 700px){
+    p {
+        font-size: 9px;
+    }
+    .buttons {
+        display: flex;
+        justify-content: center;
+    }
+    .btn{
+        padding: 1px 5px;
+        font-size: 10px;
+        line-height: 1.5;
+        border-radius: 3px;
+    }
+}
+@media(max-width: 480px){
+    .phone-details {
+        flex-direction: column;
+    }
+    .phone-info {
+        width: 100%;
+    }
+    .phone-functions {
+        width: 100%;
+        border-top: 2px solid gray;
+        border-left: none;
+    }
+}
